@@ -47,6 +47,10 @@ public interface AppBarProvider {
         getAppBarProviderImp().setNeedScrollAppBar(needScroll, flags);
     }
 
+    default void setHomeAsUpIndicator(int drawableRes) {
+        getAppBarProviderImp().setHomeAsUpIndicator(drawableRes, getSupportActionBar());
+    }
+
     default void setBackButtonVisibility(boolean visibility) {
         getAppBarProviderImp().setBackButtonVisibility(visibility, getSupportActionBar());
     }

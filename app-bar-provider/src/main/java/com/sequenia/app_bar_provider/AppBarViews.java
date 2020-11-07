@@ -1,14 +1,14 @@
 package com.sequenia.app_bar_provider;
 
-import androidx.appcompat.widget.Toolbar;
 import android.view.ViewGroup;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 
 public interface AppBarViews {
     AppBarLayout getAppBar();
-    Toolbar getToolbar();
+    MaterialToolbar getToolbar();
     ViewGroup getCollapsingContent();
     CollapsingToolbarLayout getCollapsingToolbarLayout();
 }

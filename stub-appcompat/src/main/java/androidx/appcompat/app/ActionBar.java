@@ -11,6 +11,10 @@ public abstract class ActionBar {
     public abstract View getCustomView();
     public abstract void setDisplayOptions(int options);
 
+    public void setHomeAsUpIndicator(int resId) {
+        throw new RuntimeException("Stub!");
+    }
+
     public static class LayoutParams {
         public static final int MATCH_PARENT = -1;
 

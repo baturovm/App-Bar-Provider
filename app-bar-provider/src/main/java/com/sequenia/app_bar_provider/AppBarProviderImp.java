@@ -1,14 +1,13 @@
 package com.sequenia.app_bar_provider;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-
+import com.google.android.material.appbar.MaterialToolbar;
 
 /**
  * Created by Ringo on 06.02.2018.
@@ -22,7 +21,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 public class AppBarProviderImp {
 
     private AppBarLayout appBar;
-    private Toolbar toolbar;
+    private MaterialToolbar toolbar;
     private ViewGroup collapsingContent;
     private CollapsingToolbarLayout collapsingToolbarLayout;
 
@@ -34,7 +33,7 @@ public class AppBarProviderImp {
         toolbar.setContentInsetStartWithNavigation(0);
     }
 
-    public Toolbar getToolbar() {
+    public MaterialToolbar getToolbar() {
         return toolbar;
     }
 
@@ -59,6 +58,12 @@ public class AppBarProviderImp {
             return actionBar.getCustomView();
         }
         return null;
+    }
+
+    void setHomeAsUpIndicator(int drawableRes, ActionBar actionBar) {
+        if(actionBar != null) {
+            actionBar.setHomeAsUpIndicator(drawableRes);
+        }
     }
 
     void setBackButtonVisibility(boolean visibility, ActionBar actionBar) {

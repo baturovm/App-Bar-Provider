@@ -14,6 +14,7 @@ import com.google.android.material.appbar.MaterialToolbar;
  * Методы по работе с AppBar
  * - добавление custom view в toolbar
  * - видимость кнопки home в toolbar
+ * - изменение иконки home в toolbar
  * - добаваление view в CollapsingToolbarLayout
  * - добавление view в AppBar
  * - создание view с родителем AppBar
